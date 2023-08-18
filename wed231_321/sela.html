@@ -1,0 +1,131 @@
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="/wed231_321/javatast.js"></script>
+<link rel="stylesheet" href="/wed231_321/tastcss.css">
+<body>
+  
+    <div class="container1" s>
+        <div class="wrapper">
+            <img  src="/imag/รูปภาพ11.jpg" >
+            <img  src="/imag/รูปภาพ12.jpg" >
+            <img  src="/imag/รูปภาพ13.jpg" >
+            <img  src="/imag/รูปภาพ14.jpg" >
+        </div>
+
+    </div>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="/imag/367512952_839811077315257_8558278571119118888_n-removebg-preview.png" class="logonav">
+      </a>
+
+      <div class="nav-profile">
+        <p class="nav-profile-name">Candy Shop</p>
+        <div onclick="openCart()" style="cursor: pointer;" class="nav-profile-cart">
+          <i class="fas fa-cart-shopping"></i>
+          <div id="cartcount" class="cartcount" style="display: none;">
+            0
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="sidebar">
+      <input onkeyup="searchsomething(this)" id="txt_search" type="text" class="sidebar-search" placeholder="Search something...">
+
+      <a onclick="searchproduct('all')" class="sidebar-items">
+        All product
+      </a>
+      <a onclick="searchproduct('candy')" class="sidebar-items">
+        Candy
+      </a>
+      <a onclick="searchproduct('jelly')" class="sidebar-items">
+        Jelly
+      </a>
+    </div>
+    <div id="productlist" class="product">
+
+    </div>
+  </div>
+
+  <div id="modalDesc" class="modal" style="display: none;">
+    <div onclick="closeModal()" class="modal-bg"></div>
+    <div class="modal-page">
+      <h2>Product Description</h2>
+      <br>
+      <div class="modaldesc-content">
+        <img id="mdd-img" class="modaldesc-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
+        <div class="modaldesc-detail">
+          <p id="mdd-name" style="font-size: 1.5vw;">Product name</p>
+          <p id="mdd-price" style="font-size: 1.2vw;">500 THB</p>
+          <br>
+          <p id="mdd-desc" style=  "color: #686868;" ></p>
+          <br>
+          <div class="btn-control">
+            <button onclick="closeModal()" class="btn">
+              Close
+            </button>
+            <button onclick="addtocart()" class="btn btn-buy">
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalCart" class="modal" style="display: none;">
+    <div onclick="closeModal()" class="modal-bg"></div>
+    <div class="modal-page">
+      <h1>My cart</h1>
+      <br>
+      <div id="mycart" class="cartlist">
+
+      </div>
+      
+        <div class="btn-control">
+            <button onclick="closeModal()" class="btn">
+                Cancel
+            </button>
+            <button onclick="openAddressForm1()" class="btn btn-buy">
+                Buy
+            </button>
+        </div>
+      <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true" style="background-color: aliceblue;" >
+          <div class="modal-dialog">
+             <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addressModalLabel">Enter Your Address</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                 <form>
+                          <div class="mb-3">
+                          <label for="firstName" class="form-label">First Name:</label>
+                          <input type="text" class="form-control" id="firstName" name="firstName" required>
+                          </div>
+                          <div class="mb-3">
+                          <label for="lastName" class="form-label">Last Name:</label>
+                          <input type="text" class="form-control" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                            <label for="address" class="form-label">Address:</label>
+                            <input type="text" class="form-control" id="address" name="address" required>
+                            </div>
+                           
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeModal()">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+</body>

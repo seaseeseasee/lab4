@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/wed231_321/portfolio1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.3/chart.min.js" integrity="sha512-fMPPLjF/Xr7Ga0679WgtqoSyfUoQgdt8IIxJymStR5zV3Fyb6B3u/8DcaZ6R6sXexk5Z64bCgo2TYyn760EdcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/7266e3d813.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="pro">Portfolio</h1>
+    <div style="text-align: center;">
+        <img src="/imag/prot_pro.png" class="pic" >
+    </div>
+    <div class="detail">
+        <div class="seasee">
+            <p id="per">Personal Record</p>
+            <div class="bos">
+                <p id="name1">Name: Sea Chotepaisarnkul</p>
+                <p id="phon">Mobile Number:092-523-4627</p>
+                <p id="britday">My Birthday:08/03/2004</p>
+            </div>
+        </div>
+        <div class="sea">
+            <p id="add">Address</p>
+            <p>น.ส  ซี โชติไพศาลกุล   468/1 หมู่5 หอบ้านชนกพร  ต.หนองหาร อ.สันทราย จ.เชียงใหม่ 50290</p>
+        </div>
+    </div>
+    <div class="progamp">
+      <p style="color: aliceblue;" class="com_ski">Computer Skills:</p>
+      <div class="iconcontro">
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-js"></i>
+      </div>
+      <br>
+    </div>
+    <div class="hoby">
+      <p>Hoppy:</p>
+      <div class="icon">
+        <i class="fa-solid fa-book"></i>
+        <i class="fa-solid fa-music"></i>
+        <i class="fa-solid fa-bed"></i>
+        <i class="fa-solid fa-cat"></i>
+      </div>
+    </div>
+      <div>
+        <p id="la">Language Ability</p>
+      <div>
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combined Chart Example</title>
+  <style>
+    /* เพิ่มความกว้างและความสูงให้กับแท็ก canvas */
+    #combinedChart {
+      width: 500px;
+      height: 300px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div>
+    <canvas id="combinedChart"></canvas>
+  </div>
+
+  <script>
+    // สร้างข้อมูลสำหรับกราฟวงกลม
+    const polarData = {
+      labels: ['ภาษาไทย','ภาษาอังกฤษ','ภาษาจีน'],
+      datasets: [{
+        data: [15, 10, 2],
+        backgroundColor: ['rgb(255, 99, 132)', 'rgb(75, 192, 192)', 'rgb(255, 205, 86)']
+      }]
+    };
+
+    // สร้างข้อมูลสำหรับกราฟแท่ง
+    const barData = {
+      labels: ['html', 'css', 'javascript'],
+      datasets: [{
+        label: '# of Votes',
+        data: [15, 10, 2],
+        backgroundColor: ['rgb(255, 99, 132)', 'rgb(75, 192, 192)', 'rgb(255, 205, 86)'],
+        borderWidth: 1
+      }]
+    };
+
+    // ตั้งค่าสำหรับกราฟวงกลม
+    const polarConfig = {
+      type: 'polarArea',
+      data: polarData,
+      options: {}
+    };
+
+    // ตั้งค่าสำหรับกราฟแท่ง
+    const barConfig = {
+      type: 'bar',
+      data: barData,
+      options: {
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    };
+
+    // สร้างแผนภูมิกราฟ
+    const combinedCtx = document.getElementById('combinedChart').getContext('2d');
+    new Chart(combinedCtx, polarConfig);
+    new Chart(combinedCtx, barConfig);
+  </script>
+</body>
+</html>
+
+
+        
+</body>
+
+</html>
